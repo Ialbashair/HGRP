@@ -11,6 +11,7 @@ devices = AudioUtilities.GetSpeakers()
 interface = devices.Activate(
     IAudioEndpointVolume._iid_, CLSCTX_ALL, None)
 volume = interface.QueryInterface(IAudioEndpointVolume)
+volume.GetMute()
 volRange = volume.GetVolumeRange()  # min: -96 , max: 0
 volBar = 400
 vol = 0
